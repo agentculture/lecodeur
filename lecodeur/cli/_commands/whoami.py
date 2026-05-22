@@ -51,7 +51,7 @@ def _read_agent_fields() -> dict[str, str]:
     seen_agent = False
     for line in text.splitlines():
         stripped = line.strip()
-        if stripped.startswith("- suffix:") or stripped.startswith("suffix:"):
+        if stripped.startswith(("- suffix:", "suffix:")):
             if seen_agent:  # second agent block — stop at the first
                 break
             seen_agent = True
