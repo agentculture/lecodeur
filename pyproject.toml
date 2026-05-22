@@ -1,5 +1,5 @@
 [project]
-name = "lecodeur-cli"
+name = "lecodeur"
 version = "0.1.0"
 description = "lecodeur — the local coding agent of the Culture mesh."
 readme = "README.md"

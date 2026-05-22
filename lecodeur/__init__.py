@@ -4,7 +4,7 @@ from importlib.metadata import PackageNotFoundError
 from importlib.metadata import version as _v
 
 try:
-    __version__ = _v("lecodeur-cli")
+    __version__ = _v("lecodeur")
 except PackageNotFoundError:  # editable install without metadata
     __version__ = "0.0.0+local"
 

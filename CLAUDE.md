@@ -73,16 +73,16 @@ work) is the next phase — the CLI scaffold is its host, not yet its hands.
 
 steward owns the sibling-pattern contract and is the canonical upstream for the
 vendored skills; when extending the scaffold, copy from `../steward` and rename
-`steward`→`lecodeur` / `steward-cli`→`lecodeur-cli`.
+`steward`→`lecodeur` / `steward-cli`→`lecodeur` (dist name).
 
 ## Project shape (afi-cli pattern, no `src/`)
 
-Distributed as **`lecodeur-cli`** on PyPI. Python package is `lecodeur`; the binary
-is `lecodeur`. Hatchling backend, Python ≥3.12.
+Distributed as **`lecodeur`** on PyPI (dist name, import name, and binary all
+`lecodeur` — no `-cli` suffix). Hatchling backend, Python ≥3.12.
 
 ```text
-lecodeur/                    # Python package (pip install lecodeur-cli)
-├── __init__.py             # __version__ via importlib.metadata("lecodeur-cli")
+lecodeur/                    # Python package (pip install lecodeur)
+├── __init__.py             # __version__ via importlib.metadata("lecodeur")
 ├── __main__.py             # python -m lecodeur
 └── cli/
     ├── __init__.py         # argparse main(); _LecodeurArgumentParser (routes .error() through emit_error)
@@ -124,7 +124,7 @@ honor it for every new write verb.
   (AgentCulture rule). `lecodeur.__version__` reads from package metadata; there is
   no separate literal to keep in sync.
 - **Publish:** push to `main` triggers `publish.yml` → `uv build` → publishes
-  `lecodeur-cli` to PyPI via **Trusted Publishing** (OIDC, no API tokens). PRs
+  `lecodeur` to PyPI via **Trusted Publishing** (OIDC, no API tokens). PRs
   publish a `.dev<run_number>` to TestPyPI; fork PRs are skipped (no OIDC context).
 
 ## Skills convention (cite-don't-import)

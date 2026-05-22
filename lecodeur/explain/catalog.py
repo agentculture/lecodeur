@@ -92,7 +92,7 @@ The smallest identity probe. Reads lecodeur's own `culture.yaml` (walking up
 from the installed module) and reports:
 
 - `nick` — the agent suffix (defaults to `lecodeur`)
-- `version` — the installed `lecodeur-cli` package version
+- `version` — the installed `lecodeur` package version
 - `backend` — the runtime backend (`acp`)
 - `model` — the served vLLM model
 

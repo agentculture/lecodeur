@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial scaffold to the AgentCulture sibling pattern (issue #1).
-- `lecodeur-cli` package (`lecodeur`) with the afi-cli CLI chassis:
+- `lecodeur` package (dist + import name) with the afi-cli CLI chassis:
   `cli/__init__.py` (argparse, `_LecodeurArgumentParser`), `_errors.py`
   (`LecodeurError` + exit-code policy), `_output.py` (strict stdout/stderr
   split).
