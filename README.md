@@ -1,2 +1,3 @@
 # lecodeur
-A local coding agent for Culture ecosystem
+
+A local coding agent for the Culture ecosystem.
