@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Claude Code per-machine config (not committed; see .example / settings files).
+.claude/settings.local.json
+
+# Per-machine skill config (each skill reads from this; see the .example).
+.claude/skills.local.yaml
+
+# Per-skill local overrides (optional, machine-specific).
+.claude/skills/*/local.yaml
+.claude/skills/*/scripts/*.local.sh
+
+# Claude Code harness runtime artifacts (per-machine, not source).
+.claude/scheduled_tasks.lock
